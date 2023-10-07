@@ -1,6 +1,6 @@
 ﻿namespace AksanaChopchytsAutoQATasks
 {
-    internal class Order
+    public abstract class Order
     {
         private string _productName;
         public string ProductName
@@ -61,10 +61,6 @@
             Cost = cost;
             DeliveryAddress = deliveryAddress;
         }
-        public string GetFullInfo()
-        {
-            return $"Product Name:{ProductName}, PhoneNumber:{PhoneNumber}, Cost:{Cost}, DeliveryAddress: {DeliveryAddress}";
-            
-        }
+        public abstract string GetFullInfo();
     }
 }

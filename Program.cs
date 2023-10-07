@@ -2,35 +2,17 @@
 using AksanaChopchytsAutoQATasks;
 
 
-Order[] orders = {new Order ("Ice-cream", 3752961111116, 3f, "Timiryazev St"),
-                  new Order ( "Milk", 3752951111115, 5f, "Orlovskay St"),
-                  new Order ("Whyskey", 3721111111112, 25f,"Sedova St"),
-                  new Order ("Whysk", 3721111111112, 15f,"Sedova St")};
+Order[] orders = {new OrdinaryOrder ("Ice-cream", 3752961111116, 3f, "Timiryazev St"),
+                  new OrdinaryOrder ( "Milk", 3752951111115, 5f, "Orlovskay St"),
+                  new OrdinaryOrder ("Whyskey", 3721111111112, 25f,"Sedova St"),
+                  new OrdinaryOrder ("Whysk", 3721111111112, 15f,"Sedova St"),
+                  new VIPOrder ("Laptop", 3751234567890, 900f, "Timiryazev St","Cover"),
+                  new DiscountOrder ("Mouse", 3751234567892, 25f, "Orlovskay St", -10f)};
 
 
-Console.WriteLine(" - - - Task #2 All items - - - ");
+Console.WriteLine(" - - - Task #3 All items - - - ");
 
 foreach (Order oder in orders)
 {
     Console.WriteLine(oder.GetFullInfo());
-}
-
-Console.WriteLine(" - - - Task #2.4 - - - ");
-
-foreach (Order order in orders)
-{
-    if (order.PhoneNumber.ToString().StartsWith("375"))
-    {
-        Console.WriteLine(order.GetFullInfo());
-    }
-}
-
-Console.WriteLine(" - - - Task #2.5 - - - ");
-
-foreach (Order order in orders)
-{
-    if (order.Cost < 20 && order.ProductName.ToString().StartsWith("Whys"))
-    {
-        Console.WriteLine(order.GetFullInfo());
-    }
 }
