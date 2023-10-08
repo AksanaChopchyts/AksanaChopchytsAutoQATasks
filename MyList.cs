@@ -1,6 +1,8 @@
-﻿namespace AksanaChopchytsAutoQATasks
+﻿using System.Collections;
+
+namespace AksanaChopchytsAutoQATasks
 {
-    public class MyList<T>
+    public class MyList<T> : IEnumerable<T>
     {
         public MyNode<T> Head { get; set; }
         //public MyList() { }
@@ -98,6 +100,15 @@
                 current = current.Next;
             }
         }
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new MyListEnumerator<T>(this);
+        }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            //return GetEnumerator();
+            throw new NotImplementedException();
+        }
     }
 }
