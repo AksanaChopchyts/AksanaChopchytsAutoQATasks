@@ -62,5 +62,9 @@
             DeliveryAddress = deliveryAddress;
         }
         public abstract string GetFullInfo();
+        public override string ToString()
+        {
+            return GetFullInfo();
+        }
     }
 }
