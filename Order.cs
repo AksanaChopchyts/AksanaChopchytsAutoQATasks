@@ -1,6 +1,6 @@
 ﻿namespace AksanaChopchytsAutoQATasks
 {
-    public abstract class Order
+    public abstract class Order: IComparable<Order>
     {
         private string _productName;
         public string ProductName
@@ -65,6 +65,10 @@
         public override string ToString()
         {
             return GetFullInfo();
+        }
+        public int CompareTo(Order other)
+        {
+            return PhoneNumber.CompareTo(other.PhoneNumber);
         }
     }
 }
