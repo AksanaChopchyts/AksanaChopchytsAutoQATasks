@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace AksanaChopchytsAutoQATasks
+namespace AksanaChopchytsAutoQATasks.Collections
 {
     public class MyList<T> : IEnumerable<T>
     {

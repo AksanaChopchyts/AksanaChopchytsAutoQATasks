@@ -1,6 +1,7 @@
 ﻿using System.Collections;
+using AksanaChopchytsAutoQATasks.Collections;
 
-namespace AksanaChopchytsAutoQATasks
+namespace AksanaChopchytsAutoQATasks.Collections
 {
     internal class MyListEnumerator<T> : IEnumerator<T>
     {

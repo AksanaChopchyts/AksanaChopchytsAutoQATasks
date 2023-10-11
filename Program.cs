@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AksanaChopchytsAutoQATasks;
 using AksanaChopchytsAutoQATasks.Comparers;
+using AksanaChopchytsAutoQATasks.Core;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,7 +27,7 @@ foreach (var productName in affordable_Products)
 {
     Console.WriteLine(productName);
 }
-
+    
 // Works if we have only 1!!! the most common product on the order list
 var mostFrequentProduct = orders
     .GroupBy(orders => orders.ProductName)

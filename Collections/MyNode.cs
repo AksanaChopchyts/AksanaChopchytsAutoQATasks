@@ -1,4 +1,4 @@
-﻿namespace AksanaChopchytsAutoQATasks
+﻿namespace AksanaChopchytsAutoQATasks.Collections
 {
     public class MyNode<T>
     {

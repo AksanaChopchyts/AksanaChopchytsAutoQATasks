@@ -1,4 +1,4 @@
-﻿namespace AksanaChopchytsAutoQATasks
+﻿namespace AksanaChopchytsAutoQATasks.Core
 {
     public abstract class Order: IComparable<Order>
     {

@@ -1,4 +1,6 @@
-﻿namespace AksanaChopchytsAutoQATasks
+﻿using AksanaChopchytsAutoQATasks.Core;
+
+namespace AksanaChopchytsAutoQATasks.Core
 {
     internal class VIPOrder: Order
     {

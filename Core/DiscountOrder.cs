@@ -1,4 +1,4 @@
-﻿namespace AksanaChopchytsAutoQATasks
+﻿namespace AksanaChopchytsAutoQATasks.Core
 {
     internal class DiscountOrder: Order
     {
