@@ -9,7 +9,7 @@ namespace AksanaChopchytsAutoQATasks.Delivery
 {
     public class MotoDelivery : IDelivery
     {
-        public void DeliveryOrder(Order order)
+        public void DeliverOrder(Order order)
         {
             Console.WriteLine($"Order {order.ProductName} is being delivered by motobike."); // Реализация мото-доставки
         }
