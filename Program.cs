@@ -2,10 +2,11 @@
 using AksanaChopchytsAutoQATasks;
 using AksanaChopchytsAutoQATasks.Comparers;
 using AksanaChopchytsAutoQATasks.Core;
+using AksanaChopchytsAutoQATasks.Delivery;
 using System.Collections.Generic;
 using System.Linq;
 
-List<Order> orders = new List<Order>();
+/*List<Order> orders = new List<Order>();
 orders.Add(new OrdinaryOrder("Ice-cream", 3752961111116, 3f, "Timiryazev St"));
 orders.Add(new OrdinaryOrder("Milk", 3752951111115, 5f, "Orlovskay St"));
 orders.Add(new OrdinaryOrder("Milk", 3752951111115, 5f, "Sedova St"));
@@ -35,4 +36,16 @@ var mostFrequentProduct = orders
     .Select(group => group.Key)
     .First();
 
-Console.WriteLine("Most frequent product: " + mostFrequentProduct); 
+Console.WriteLine("Most frequent product: " + mostFrequentProduct);*/
+
+
+DeliveryService yandex = new DeliveryService("Yandex");
+
+yandex.AddOrder(new OrdinaryOrder("Ice-cream", 3752961111116, 3f, "Timiryazev St"));
+yandex.AddOrder(new OrdinaryOrder("Milk", 3752951111115, 5f, "Orlovskay St"));
+yandex.AddOrder(new OrdinaryOrder("Milk", 3752951111115, 5f, "Sedova St"));
+yandex.AddOrder(new OrdinaryOrder("Whyskey", 3721111111112, 101f, "Sedova St"));
+yandex.AddOrder(new OrdinaryOrder("Whysk", 3721111111112, 15f, "Sedova St"));
+yandex.AddOrder(new DiscountOrder("Mouse", 3751234567892, 25f, "Orlovskay St", -10f));
+yandex.AddOrder(new VIPOrder("Laptop", 3751234567890, 900f, "Timiryazev St", "Cover"));
+    
